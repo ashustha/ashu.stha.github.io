@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                <div class="logo">
+                    <p>Logo</p>
+                </div>
+                <li class="active">
+                    <a href="index.html"><i class="fas mr-2 fa-lg fa-th-large"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas mr-2 fa-lg fa-bullseye"></i>Goals</a>
+                </li>
+                <li>
+                    <a href="/transaction-history.html"><i class="fas mr-2 fa-lg fa-history"></i>Transaction History</a>
+                </li>
+                <li>
+                    <a href="/expenses-analysis.html"><i class="fas mr-2 fa-lg fa-exchange-alt"></i>Expense Analysis</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas mr-2 fa-lg fa-coins"></i>Finance Management</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><i
+                            class="fas mr-2 fa-lg fa-cogs"></i>Additional Functions</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#"><i class="fas mr-2  fa-file-import"></i>Import Transactions</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas mr-2 fa-sync-alt"></i>Sync Bank account</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas mr-2 fa-file-csv"></i>Import CSV</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fas mr-2 fa-plus"></i>Manually Add Transactions</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"> <i class="fas mr-2 fa-lg fa-lightbulb"></i>Tips</a>
+                </li>
+            </ul>
+            <div class="sidebar-profile-wrapper">
+                <p>Logged in as</p>
+                <img src="./img/photo2.jpg" alt="">
+                <h2>Cranjis McBasketBall</h2>
+                <button class="btn btn-info">Setting</button>
+                <button class="btn btn-info">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="row w-100">
+                        <div class="col-lg-8">
+                            <div class="navbar-mobile d-block d-sm-none">
+                                <button type="button" id="sidebarCollapse" class="btn btn-default">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                                <h4>Dashboard</h4>
+                            </div>
+
+                            <div class="nav-search d-none d-md-block d-lg-block d-xl-block">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="Search for Something...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="nav-dropdown-menu">
+                                <ul>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fas fa-lg fa-envelope dropdown-menu-icon"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-width dropdown-menu-right"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="dropdown-menu-title">
+                                                    <h5>Messages</h5>
+                                                </div>
+                                                <ul class="notification-wrapper list-unstyled">
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo1.jpeg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Ramesh Chaudhari</h5>
+                                                                        <p class="card-text">Thank you!.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo2.jpg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Carla Scotcs</h5>
+                                                                        <p class="card-text">Can I get the repors by 2PM
+                                                                            today?.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo3.jpeg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Mery Morly</h5>
+                                                                        <p class="card-text">Lets catch up soon.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fas fa-lg fa-bell dropdown-menu-icon"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-width dropdown-menu-right"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="dropdown-menu-title">
+                                                    <h5>Notifications</h5>
+                                                </div>
+                                                <ul class="notification-wrapper list-unstyled">
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo3.jpg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Flying Car</h5>
+                                                                        <p class="card-text">A flying car was spoted
+                                                                            flying today.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/house.jpg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">House on rent</h5>
+                                                                        <p class="card-text">4BHK House on rent. Lease
+                                                                            should be paid yearly.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/car.jpg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Bugatti</h5>
+                                                                        <p class="card-text">Bugatti launced another
+                                                                            model which you'll never be
+                                                                            able to afford.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo1.jpeg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Person Missing</h5>
+                                                                        <p class="card-text">This is person is missing.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo1.jpeg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Card title</h5>
+                                                                        <p class="card-text">This is a wider card with
+                                                                            supporting text below as a
+                                                                            natural.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo1.jpeg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Card title</h5>
+                                                                        <p class="card-text">This is a wider card with
+                                                                            supporting text below as a
+                                                                            natural.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="media">
+                                                        <div class="card" style="max-width: 540px;">
+                                                            <div class="row no-gutters">
+                                                                <div
+                                                                    class="col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                                                    <img src="/img/photo1.jpeg" class="img-fluid"
+                                                                        class="mr-3" alt="...">
+                                                                </div>
+                                                                <div class="col-md-10 col-10">
+                                                                    <div class="card-body p-0">
+                                                                        <h5 class="card-title">Card title</h5>
+                                                                        <p class="card-text">This is a wider card with
+                                                                            supporting text below as a
+                                                                            natural.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <div class="profile-image">
+                                                    <img src="./img/photo1.jpeg" class="img-fluid" alt="">
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#"><i
+                                                        class="fas fa-user mr-3"></i>Profile</a>
+                                                <a class="dropdown-item" href="#"><i
+                                                        class="fas fa-sign-out-alt mr-3"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-default d-none d-sm-block d-md-none">
+                        <span><img class="burger-menu-icon" src="./img/menu.svg" alt=""></span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="content-items">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="page-title">Dashboard <small class="wrench"><i class="fas fa-wrench"></i></small>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 mb-2">
+                        <div class="info-tab one">
+                            <div class="row">
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-2x fa-clipboard-list"></i>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-10 d-flex align-items-center">
+                                    <div class="info-tab-header">
+                                        <h4>Progress Update</h4>
+                                        <p><small>You've saved $100 this week</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 mb-2">
+                        <div class="info-tab two">
+                            <div class="row">
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-2x fa-piggy-bank"></i>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-10 d-flex align-items-center">
+                                    <div class="info-tab-header">
+                                        <h4>Uncategorized Transactions</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 mb-2">
+                        <div class="info-tab three">
+                            <div class="row">
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-2x fa-bullseye"></i>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-10 d-flex align-items-center">
+                                    <div class="info-tab-header">
+                                        <h4>Create a goal</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 mb-2">
+                        <div class="info-tab four">
+                            <div class="row">
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-2 col-2 d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-2x fa-clipboard-list"></i>
+                                </div>
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-10 d-flex align-items-center">
+                                    <div class="info-tab-header">
+                                        <h4>Upgrade to premmium</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12">
+                        <div class="row row-eq-height">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card custom-card">
+                                    <div class="card-header">Financial Management</div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h4>Logo</h4>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <button type="button"
+                                                    class="btn btn-outline-info custom-buttons p-2">Manage
+                                                    Loans</button>
+                                            </div>
+                                        </div>
+                                        <div class="management-box">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-6">
+                                                    <h5>Available Credit Limit</h5>
+                                                    <h3>$100</h3>
+                                                    <button type="button"
+                                                        class="btn btn-outline-info custom-buttons">Request
+                                                        Draw</button>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-6">
+                                                    <h5>Balance Owing</h5>
+                                                    <h3>$75</h3>
+                                                    <button type="button"
+                                                        class="btn btn-outline-info custom-buttons custom-buttons-active">Make
+                                                        Payment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="next-installment-box">
+                                            <h4 class="next-installment-heading">Next Installment</h4>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-2"></div>
+                                                <div class="col-lg-4 col-md-4 col-4">
+                                                    <h5>Amount</h5>
+                                                    <h6>$45</h6>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-4">
+                                                    <h5>Date</h5>
+                                                    <h6>Wed, 23 Oct.</h6>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-2"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-outline-info custom-buttons">See
+                                            details</button>
+                                    </div>
+                                    <img class="transparent-background-image" src="./img/coins-solid.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card custom-card">
+                                    <div class="card-header">Goals <a href="#" class="pull-right"><i
+                                                class="fa fa-plus"></i></a></div>
+                                    <div class="card-body pt-0 pb-0 goals-card">
+                                        <div class="card no-border mb-3">
+                                            <img src="./img/house.jpg" class="img-fluid card-img-top" alt="...">
+                                            <div class="card-body p-0 pt-2 pb-2">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h5 class="card-title">Dream House</h5>
+                                                        <p><i class="far fa-xs fa-calendar-alt mr-2"></i><small>26 Sep
+                                                                2022</small></p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                                aria-valuemax="100">25%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer p-0 goals-card-buttons">
+                                                <button type="button" class="btn btn-outline-info custom-buttons">Edit
+                                                    Goals</button>
+                                                <button type="button" class="btn btn-outline-info custom-buttons">View
+                                                    History</button>
+                                            </div>
+                                        </div>
+                                        <div class="card no-border mb-3">
+                                            <img src="./img/car.jpg" class="img-fluid card-img-top" alt="...">
+                                            <div class="card-body p-0 pt-2 pb-2">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h5 class="card-title">Dream Car</h5>
+                                                        <p><i class="far fa-xs fa-calendar-alt mr-2"></i><small>26 Sep
+                                                                2022</small></p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                                aria-valuemax="100">25%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer p-0 goals-card-buttons">
+                                                <button type="button" class="btn btn-outline-info custom-buttons">Edit
+                                                    Goals</button>
+                                                <button type="button" class="btn btn-outline-info custom-buttons">View
+                                                    History</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-outline-info custom-buttons">Manage
+                                            Goals</button>
+                                    </div>
+                                    <img class="transparent-background-image" src="./img/bullseye-solid.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card custom-card">
+                                    <div class="card-header">Recent Transactions</div>
+                                    <div class="card-body pt-0 pb-0 recent-transaction-card">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="date">11 Oct</td>
+                                                        <td class="text">Comm Bank App Fule</td>
+                                                        <td class="amount red">$5.50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">11 Oct</td>
+                                                        <td class="text">Nissan Finance</td>
+                                                        <td class="amount red">$116.0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">11 Oct</td>
+                                                        <td class="text">McDonalds Reedy Creek</td>
+                                                        <td class="amount green">$240</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">12 Oct</td>
+                                                        <td class="text">McDonalds Reedy Creek</td>
+                                                        <td class="amount red">$5.50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">12 Oct</td>
+                                                        <td class="text">McDonalds Reedy Creek</td>
+                                                        <td class="amount red">$8.0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="date">13 Oct</td>
+                                                        <td class="text">McDonalds Reedy Creek</td>
+                                                        <td class="amount red">$3.0</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-outline-info custom-buttons">See full
+                                            transaction history</button>
+                                    </div>
+                                    <img class="img-fluid transparent-background-image" src="./img/history-solid.png"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card custom-card">
+                                    <div class="card-header">Financial Management Tips</div>
+                                    <div class="card-body pt-0 pb-0">
+                                        <div class="card financial-management-card" style="max-width: 540px;">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 col-md-3 col-3">
+                                                    <div class="user-pic">
+                                                        <img src="./img/photo1.jpeg" class="img-fluid card-img"
+                                                            alt="...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Getting the most out of your business
+                                                        </h5>
+                                                        <p class="card-text user-name">Luke Skywalker <small
+                                                                class="pull-right">Last updated 3 mins ago</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card financial-management-card" style="max-width: 540px;">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 col-md-3 col-3">
+                                                    <div class="user-pic">
+                                                        <img src="./img/photo2.jpg" class="img-fluid card-img"
+                                                            alt="...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-md-8 col-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">6 secrets from billionares to efficiently
+                                                            manage your finances</h5>
+                                                        <p class="card-text user-name">Dasfat Bidge <small
+                                                                class="pull-right">Last updated 3 mins ago</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card financial-management-card" style="max-width: 540px;">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 col-md-3 col-3">
+                                                    <div class="user-pic">
+                                                        <img src="./img/photo3.jpg" class="img-fluid card-img"
+                                                            alt="...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-9">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Voucher code : AIJDEUEHS</h5>
+                                                        <p class="card-text user-name">Use this code to spawn a free
+                                                            parachute. You can then freely jump off a plane and not die
+                                                            upon landing by appropriately using the parasuite.</p>
+                                                        <p class="card-text"><small class="text-muted"><b>Expiry Date:
+                                                                </b>30 Oct 2019</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-outline-info custom-buttons">More from the
+                                            blog</button>
+                                    </div>
+                                    <img class="img-fluid transparent-background-image" src="./img/lightbulb-solid.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12">
+                        <div class="card custom-card">
+                            <div class="card-header">Budget Analysis</div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <canvas id="myChart" width="400" height="250"></canvas>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="do_legend"></div>
+                                </div>
+                            </div>
+                            <div class="card-header pl-4">Highest Expenditure</div>
+                            <div class="card-body pt-0 pb-0">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless analysis-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Target</th>
+                                                <th>Expenses</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="title">Food and Groceries</td>
+                                                <td class="amount">$120</td>
+                                                <td class="amount green">$5.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Health and Utilities</td>
+                                                <td class="amount">$200</td>
+                                                <td class="amount red">$116.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Personal and Medical</td>
+                                                <td class="amount">$400</td>
+                                                <td class="amount green">$240</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-header pl-4 pt-2">Upcomming Payments</div>
+                            <div class="card-body pt-0 pb-0">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless payments-table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="date">11 Oct</td>
+                                                <td class="text">Comm Bank App Fule</td>
+                                                <td class="amount blue">$5.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date">11 Oct</td>
+                                                <td class="text">Nissan Finance</td>
+                                                <td class="amount blue">$116.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date">11 Oct</td>
+                                                <td class="text">McDonalds Reedy Creek</td>
+                                                <td class="amount blue">$240</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date">12 Oct</td>
+                                                <td class="text">McDonalds Reedy Creek</td>
+                                                <td class="amount blue">$5.50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <img class="img-fluid transparent-background-image" src="./img/exchange-alt-solid.png"
+                                    alt="">
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-outline-info custom-buttons">Manage Budget</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dark Overlay element -->
+        <div class="overlay"></div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/homepage-charts.js"></script>
+
+
+</body>
+
+</html>
